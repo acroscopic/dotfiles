@@ -1,11 +1,8 @@
 #
 # ~/.bash_profile
 #
+# file ensures .bashrc is loaded in login shells (like when logging in over SSH).
 
-LANG="en_IN.utf8"
-export LANG
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+export LANG="en_IN.utf8"
 
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
-fi
+[[ -f ~/.bashrc ]] && source ~/.bashrc
