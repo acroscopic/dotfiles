@@ -50,11 +50,9 @@ set nohelp
 ## Enable word wrapping across lines.
 set softwrap
 
-## Auto-save on exit.
-set tempfile
-
 ## Show visual whitespace using Unicode symbols.
-set whitespace "\u00BB\u00B7"
+## » (U+00BB) for tabs and · (U+00B7) for space
+set whitespace "»·"
 
 ## Detect word boundaries using punctuation.
 set wordbounds
@@ -162,7 +160,6 @@ unbind ^O main
 unbind ^L main
 unbind ^P main
 unbind ^] main
-unbind ^\\ main
 
 bind ^A complete main
 bind ^W whereis main
