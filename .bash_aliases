@@ -4,38 +4,41 @@
 #----------------------
 
 # safety aliases
-alias cp="cp -i"   #asks if you're sure you want to copy
-alias rm="rm -i "  #same but with deleting files
+alias cp="cp -i"   # asks if you're sure you want to copy
+alias rm="rm -i "  # same but with deleting files
+# these two can get in the way of some workflows, pipe them into yes if need be, or temporarily comment these lines
 
 # terminal behavior
-alias ll="ls -lah"              #lists all files in the directory vertically with human readable file sizes
-alias cls="clear"               #windows clear aliased to clear the screen
+alias ll="ls -lah"              # lists all files in the directory vertically with human readable file sizes
+alias cls="clear"               # windows clear aliased to clear the screen
 alias thanks="exec sleep 0"     # closes the terminal
+alias ..="cd ../.."             # moves back 2 directories
+alias ...="cd ../../.."         # moves back 3 directories
 
 # terminal fun
-alias sl="while true; do sl -al; done"    #if you mistype ls you get an infinity train
+alias sl="while true; do sl -al; done"    # if you mistype ls you get an infinity train :P
 alias fire="aafire -driver curses"        # warm up by the fire
 
 # system monitoring
-alias mem="ps axch -o cmd:15,%mem --sort=-%mem | head"  # Top 10 memory-using processes
-alias cpu="ps axch -o cmd:15,%cpu --sort=-%mem | head"  # Top 10 CPU-using processes
-alias dfc="df -h | grep -v tmpfs"                       # Disk usage, exclude temp filesystems
-alias ports="sudo lsof -i -P -n | grep LISTEN"          # Show listening ports
+alias mem="ps axch -o cmd:15,%mem --sort=-%mem | head"  # top 10 memory-using processes
+alias cpu="ps axch -o cmd:15,%cpu --sort=-%mem | head"  # top 10 CPU-using processes
+alias dfc="df -h | grep -v tmpfs"                       # disk usage, exclude temp filesystems
+alias ports="sudo lsof -i -P -n | grep LISTEN"          # show listening ports
 
 # media 
-alias cmus="rm -rf /run/user/1000/cmus-socket/; cmus"                                             #opens the cmus music player and closes old sockets
-alias audio="yt-dlp -x -f bestaudio --audio-format vorbis --no-warnings -o '%(title)s.%(ext)s'"   # Download audio in .ogg format
-alias video="yt-dlp --embed-subs --no-warnings -o '%(title)s.%(ext)s'"                            # Download video with subtitles
-alias playlist="yt-dlp --embed-subs --no-warnings --yes-playlist -o '%(title)s.%(ext)s'"          # Download entire playlist with subtitles
+alias cmus="rm -rf /run/user/1000/cmus-socket/; cmus"                                             # opens the cmus music player and closes old sockets
+alias audio="yt-dlp -x -f bestaudio --audio-format vorbis --no-warnings -o '%(title)s.%(ext)s'"   # download audio in .ogg format
+alias video="yt-dlp --embed-subs --no-warnings -o '%(title)s.%(ext)s'"                            # download video with subtitles
+alias playlist="yt-dlp --embed-subs --no-warnings --yes-playlist -o '%(title)s.%(ext)s'"          # download entire playlist with subtitles
 
 # productivity
-alias todo="nano ~/Desktop/documents/notes/todo" #opens my todo list
-alias log="nano ~/Desktop/documents/notes/dailylog" #opens my daily log file
+alias todo="nano ~/Desktop/documents/notes/todo" #o pens my todo list
+alias log="nano ~/Desktop/documents/notes/dailylog" # opens my daily log file
 
 # networking
 
-alias pingg="ping -c 5 8.8.8.8"                             # Quick ping test
-alias canihazip="curl https://am.i.mullvad.net/connected"   #what's my ip + are you using mullvad
+alias pingg="ping -c 5 8.8.8.8"                                                                              # quick ping test
+alias canihazip="curl https://am.i.mullvad.net/connected"                                                    # what's my ip + are you using mullvad
 alias speed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"  # Speed test
 
 # security
