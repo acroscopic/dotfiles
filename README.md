@@ -13,7 +13,6 @@ Minimal personal dotfiles for Bash and Nano.
 
 ### Option 1: Manual Copy
 
-####bash ~ $
 git clone https://github.com/acroscopic/dotfiles.git
 cp dotfiles/.bashrc dotfiles/.bash_profile dotfiles/.bash_aliases dotfiles/.nanorc ~/
 
