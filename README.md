@@ -13,11 +13,14 @@ Minimal personal dotfiles for Bash and Nano.
 
 ### Option 1: Manual Copy
 
+```bash
 git clone https://github.com/acroscopic/dotfiles.git
 cp dotfiles/.bashrc dotfiles/.bash_profile dotfiles/.bash_aliases dotfiles/.nanorc ~/
+```
 
 ### Option 2: Symlinks (Reccomended)
 
+```bash
 git clone https://github.com/acroscopic/dotfiles.git
 cd dotfiles
 
@@ -25,11 +28,14 @@ ln -sf "$PWD/.bashrc" ~/.bashrc
 ln -sf "$PWD/.bash_profile" ~/.bash_profile
 ln -sf "$PWD/.bash_aliases" ~/.bash_aliases
 ln -sf "$PWD/.nanorc" ~/.nanorc
+```
 
 ### Option 3: Install Script
 
+```bash
 git clone https://github.com/acroscopic/dotfiles.git
 cd dotfiles
 
 chmod +x install.sh
 ./install.sh
+```
